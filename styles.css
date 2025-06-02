@@ -162,26 +162,43 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
 }
+
+/* -- SKILLS BULLET STYLE -- */
+.skills-section {
+    margin-bottom: 24px;
+}
 .skill-item {
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 10px;
+}
+.skill-bullet {
+    color: #34e3f3;
+    margin-right: 6px;
+    font-size: 1.2em;
+    flex-shrink: 0;
 }
 .skill-name {
-    margin-bottom: 2px;
+    min-width: 135px;
+    margin-right: 18px;
     font-size: 0.95em;
+    flex-shrink: 0;
 }
 .skill-bar {
+    flex-grow: 1;
     height: 5px;
     background-color: #555;
     border-radius: 2px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 .skill-level {
     height: 100%;
     background-color: #7ba7ab;
     border-radius: 2px;
 }
+
 .education-item, .experience-item ,extra-item {
     margin-bottom: 10px;
     position: relative;
@@ -209,8 +226,8 @@ body {
 .language-item {
     display: flex;
     align-items: center;
-    margin-bottom: 6px;
-    font-size: 0.97em;
+    margin-bottom: 8px;
+    font-size: 0.98em;
 }
 .language-bullet {
     margin-right: 8px;
@@ -219,10 +236,6 @@ body {
 .about-me {
     margin-bottom: 15px;
     line-height: 1.4;
-    font-size: 0.98em;
-}
-.language-item {
-    margin-bottom: 8px;
     font-size: 0.98em;
 }
 .course-link {
