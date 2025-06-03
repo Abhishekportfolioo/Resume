@@ -199,6 +199,45 @@ body {
     border-radius: 2px;
 }
 
+/* --- LANGUAGES --- */
+.languages-section {
+    margin-bottom: 24px;
+}
+.language-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.98em;
+    gap: 8px;
+}
+.language-bullet {
+    margin-right: 8px;
+    color: #7ba7ab;
+}
+.language-name {
+    min-width: 60px;
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.language-item .skill-bar {
+    flex-grow: 1;
+    max-width: 120px;
+    min-width: 40px;
+    margin-left: 8px;
+    height: 5px;
+    background-color: #555;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+.language-item .skill-level {
+    height: 100%;
+    background-color: #7ba7ab;
+    border-radius: 2px;
+}
+
 .education-item, .experience-item ,extra-item {
     margin-bottom: 10px;
     position: relative;
@@ -222,16 +261,6 @@ body {
 .interest-bullet {
     margin-right: 8px;
     color: #34e3f3;
-}
-.language-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    font-size: 0.98em;
-}
-.language-bullet {
-    margin-right: 8px;
-    color: #7ba7ab;
 }
 .about-me {
     margin-bottom: 15px;
