@@ -3,23 +3,34 @@
     margin: 0;
 }
 @media print {
-    body {
-        margin: 0;
-        padding: 0;
+    html, body {
         width: 210mm;
         height: 297mm;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        box-shadow: none !important;
     }
     .resume-container {
-        margin: 0;
-        border: none;
-        box-shadow: none;
-        width: 210mm;
-        height: 297mm;
+        width: 210mm !important;
+        height: 297mm !important;
+        min-height: 0 !important;
+        max-width: none !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    .left-column, .right-column {
+        min-height: unset !important;
+        box-shadow: none !important;
     }
     .view-switcher, .view-switcher * {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
+    }
+    .main-content {
+        min-height: 0 !important;
     }
 }
 * {
@@ -199,6 +210,10 @@ body {
     border-radius: 2px;
 }
 
+.interests-section {
+    margin-bottom: 24px;
+}
+
 /* --- LANGUAGES --- */
 .languages-section {
     margin-bottom: 24px;
@@ -206,36 +221,58 @@ body {
 .language-item {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-    font-size: 0.98em;
-    gap: 8px;
+    margin-bottom: 16px;
+    gap: 10px;
 }
 .language-bullet {
-    margin-right: 8px;
-    color: #7ba7ab;
+    color: #34e3f3;
+    margin-right: 6px;
+    font-size: 1.2em;
+    flex-shrink: 0;
 }
 .language-name {
-    min-width: 60px;
-    max-width: 110px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    min-width: 135px;
+    margin-right: 18px;
+    font-size: 0.95em;
+    flex-shrink: 0;
 }
-.language-item .skill-bar {
+.language-bar {
     flex-grow: 1;
     max-width: 120px;
     min-width: 40px;
-    margin-left: 8px;
     height: 5px;
     background-color: #555;
     border-radius: 2px;
     position: relative;
     overflow: hidden;
 }
-.language-item .skill-level {
+.language-level {
     height: 100%;
     background-color: #7ba7ab;
     border-radius: 2px;
+}
+
+/* --- ACTIVITIES --- */
+.activity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    font-size: 0.97em;
+    position: relative;
+}
+.activity-bullet {
+    color: #7ba7ab;
+    font-size: 1em;
+    margin-right: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.activity-name {
+    margin-left: 16px;
+    font-size: 0.97em;
+    word-break: break-word;
 }
 
 .education-item, .experience-item ,extra-item {
