@@ -7,7 +7,7 @@
     <style>
         @page {
             size: A4;
-            margin: 0;
+            margin: 15mm;
         }
         @media print {
             html, body {
@@ -20,12 +20,13 @@
             }
             .resume-container {
                 width: 210mm !important;
-                height: 297mm !important;
+                height: auto !important;
                 min-height: 0 !important;
                 max-width: none !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 border: none !important;
+                page-break-after: avoid;
             }
             .left-column, .right-column {
                 min-height: unset !important;
@@ -38,6 +39,36 @@
             }
             .main-content {
                 min-height: 0 !important;
+            }
+            /* Prevent section breaks */
+            .education-section,
+            .courses-section,
+            .experience-section,
+            .activities-section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            /* Ensure activities section stays together */
+            .activities-section {
+                page-break-before: auto;
+                page-break-after: avoid;
+                break-before: auto;
+                break-after: avoid;
+            }
+            /* If activities section is too close to bottom, move to next page */
+            .activities-section {
+                orphans: 3;
+                widows: 3;
+            }
+            /* Reduce some spacing for print */
+            .right-column {
+                padding: 10px 15px !important;
+            }
+            .section-title {
+                margin-bottom: 8px !important;
+            }
+            .education-item, .experience-item, .activity-item {
+                margin-bottom: 8px !important;
             }
         }
         * {
@@ -370,6 +401,26 @@
             margin-bottom: 10px;
             font-size: 0.95em;
         }
+
+        /* Print-specific adjustments for better page flow */
+        .about-section {
+            margin-bottom: 18px;
+        }
+        .education-section {
+            margin-bottom: 18px;
+        }
+        .courses-section {
+            margin-bottom: 18px;
+        }
+        .experience-section {
+            margin-bottom: 18px;
+        }
+        .activities-section {
+            margin-bottom: 18px;
+            /* Ensure this section has enough space or moves to next page */
+            min-height: 60px;
+        }
+
         /* RESPONSIVE DESIGN */
         @media (max-width: 900px) {
             .resume-container {
