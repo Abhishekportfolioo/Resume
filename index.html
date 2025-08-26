@@ -7,7 +7,7 @@
     <style>
         @page {
             size: A4;
-            margin: 15mm;
+            margin: 10mm;
         }
         @media print {
             html, body {
@@ -65,10 +65,10 @@
                 padding: 10px 15px !important;
             }
             .section-title {
-                margin-bottom: 8px !important;
+                margin-bottom: 4px !important;
             }
             .education-item, .experience-item, .activity-item {
-                margin-bottom: 8px !important;
+                margin-bottom: 4px !important;
             }
         }
         * {
@@ -102,7 +102,7 @@
             background-color: #7ba7ab;
             color: white;
             padding: 0;
-            min-height: 120px;
+            min-height: 100px;
             align-items: stretch;
             flex-wrap: wrap;
         }
@@ -111,8 +111,8 @@
             align-items: center;
         }
         .profile-img {
-            width: 90px;
-            height: 90px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 5px solid #7ba7ab;
             margin: 15px;
@@ -132,7 +132,7 @@
         }
         .name-title {
             background-color: #7ba7ab;
-            padding: 18px 20px;
+            margin-top: -4%;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -171,14 +171,14 @@
             flex-grow: 1;
         }
         .section-title {
-            font-size: 1.1em;
+            font-size: 1em;
             border-bottom: 2px solid #7ba7ab;
             padding-bottom: 5px;
             margin-bottom: 12px;
             color: #2d3e50;
         }
         .left-section-title {
-            font-size: 1.1em;
+            font-size: 1em;
             border-bottom: 2px solid #7ba7ab;
             padding-bottom: 5px;
             margin-bottom: 12px;
@@ -219,7 +219,7 @@
         .skill-item {
             display: flex;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 2px;
             gap: 10px;
         }
         .skill-bullet {
@@ -259,7 +259,7 @@
         .language-item {
             display: flex;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 2px;
             gap: 10px;
         }
         .language-bullet {
@@ -271,7 +271,7 @@
         .language-name {
             min-width: 135px;
             margin-right: 18px;
-            font-size: 0.95em;
+            font-size: 0.9em;
             flex-shrink: 0;
         }
         .language-bar {
@@ -296,7 +296,7 @@
             align-items: center;
             margin-bottom: 10px;
             padding-left: 15px;
-            font-size: 0.97em;
+            font-size: 0.88em;
             position: relative;
         }
         .activity-bullet {
@@ -309,16 +309,17 @@
         }
         .activity-name {
             margin-left: 16px;
-            font-size: 0.97em;
+            font-size: 0.88em;
             word-break: break-word;
         }
 
         .education-item, .experience-item, .extra-item {
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             position: relative;
             padding-left: 15px;
             font-size: 0.88em;
         }
+        
         .education-item:before, .experience-item:before, .extra-item:before {
             content: '•';
             position: absolute;
@@ -367,7 +368,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 240px;
             color: #777;
             cursor: pointer;
             transition: background 0.3s ease;
@@ -399,30 +400,30 @@
         }
         .extra-item {
             margin-bottom: 10px;
-            font-size: 0.95em;
+            font-size: 0.88em;
         }
 
         /* Print-specific adjustments for better page flow */
         .about-section {
-            margin-bottom: 18px;
+            margin-bottom: 1px;
         }
         .education-section {
-            margin-bottom: 18px;
+            margin-bottom: 1px;
         }
         .courses-section {
-            margin-bottom: 18px;
+            margin-bottom: 1px;
         }
         .experience-section {
-            margin-bottom: 18px;
+            margin-bottom: 1px;
         }
         .activities-section {
-            margin-bottom: 18px;
+            margin-bottom: 1px;
             /* Ensure this section has enough space or moves to next page */
             min-height: 60px;
         }
 
         /* RESPONSIVE DESIGN */
-        @media (max-width: 900px) {
+        /* @media (max-width: 900px) {
             .resume-container {
                 max-width: 100vw;
                 min-width: 0;
@@ -449,8 +450,8 @@
             .name-title {
                 padding: 14px 12px;
             }
-        }
-        @media (max-width: 600px) {
+        } */
+        /* @media (max-width: 600px) {
             .resume-container {
                 box-shadow: none;
                 min-height: 100vh;
@@ -481,7 +482,7 @@
             .section-title, .left-section-title {
                 font-size: 1em;
             }
-        }
+        } */
         /* FORCE MOBILE / DESKTOP OVERRIDES */
         body.force-mobile .resume-container {
             max-width: 100vw !important;
@@ -537,8 +538,8 @@
             min-height: 120px !important;
         }
         body.force-desktop .profile-img {
-            width: 90px !important;
-            height: 90px !important;
+            width: 120px !important;
+            height: 120px !important;
             margin: 15px !important;
         }
         body.force-desktop .name-title {
@@ -550,7 +551,7 @@
 <body>
     <div class="resume-container">
         <div class="header">
-            <div class="profile-section">
+            <div class="profile-section" style="margin-left: 70px;">
                 <!-- Modal for Full-Size Image -->
                 <div id="imageModal" class="image-modal">
                     <img id="modalImage" src="" alt="Full Size" class="modal-img">
@@ -560,9 +561,9 @@
                     <img src="Abhishek Resume Photo.jpg" alt="Abhishek Dangi - Click to view"/>
                 </div>
             </div>
-            <div class="name-title">
-                <h1 class="name">Abhishek Dangi</h1>
-                <h2 class="title">Textile Technology Student </h2>
+            <div class="name-title" style="margin-left: 90px;">
+                <h2 class="name">Abhishek Dangi</h2>
+                <h3 class="title">Textile Technology Student </h3>
             </div>
         </div>
         
@@ -575,15 +576,15 @@
                         <div><a href="tel:+919460448983">+91 9460448983</a></div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
+                        <div class="contact-icon"><img src="https://static.vecteezy.com/system/resources/previews/022/484/516/original/google-mail-gmail-icon-logo-symbol-free-png.png" style="width: 100%;"></div>
                         <div><a href="mailto:22tt010@titsbhiwani.ac.in">22tt010@titsbhiwani.ac.in</a></div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon"><img src="https://static.vecteezy.com/system/resources/previews/017/396/764/non_2x/google-maps-icon-free-png.png" style="width: 100%;"></div>
                         <div><a href="https://maps.app.goo.gl/trG4weryCLP82SGBA" target="_blank">Bhiwani, Haryana</a></div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">🔗</div>
+                        <div class="contact-icon"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" style="width:100%;"></div>
                         <div><a href="https://www.linkedin.com/in/abhishekdangi03" target="_blank">Abhishek Dangi</a></div>
                     </div>
                     <div class="contact-item">
@@ -601,31 +602,96 @@
                     </div>
                     <div class="skill-item">
                         <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Testing</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Manufacture</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Weave Design</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Microsoft</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Website Design</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div>
+                    <!-- <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Testing</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Manufacturing</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div> -->
+                </div>
+
+                <!-- <div class="skills-section">
+                    <h3 class="left-section-title">TECHNICAL SKILLS</h3>
+                    <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Microsoft</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                    </div> -->
+                    <!-- <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Testing</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div> -->
+                    <!-- <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Manufacture</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div> -->
+                    <!-- <div class="skill-item">
+                        <span class="skill-bullet">•</span>
                         <span class="skill-name">Canva Design</span>
                         <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="skill-item">
+                    </div> -->
+                    <!-- <div class="skill-item">
                         <span class="skill-bullet">•</span>
-                        <span class="skill-name">Video Editing</span>
+                        <span class="skill-name">Microsoft</span>
                         <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="skill-item">
+                    </div> -->
+                    <!-- <div class="skill-item">
                         <span class="skill-bullet">•</span>
                         <span class="skill-name">Web Designing</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div> -->
+                    <!-- <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Testing</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
                     </div>
-                </div>
+                    <div class="skill-item">
+                        <span class="skill-bullet">•</span>
+                        <span class="skill-name">Textile Manufacturing</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div> -->
+                <!-- </div> -->
                 
                 <div class="interests-section">
-                    <h3 class="left-section-title">INTERESTS</h3>
+                    <h3 class="left-section-title">Hobbies</h3>
                     <div class="interest-item">
                         <div class="interest-bullet">•</div>
-                        <div>Cycling</div>
+                        <div>Travelling</div>
                     </div>
                     <div class="interest-item">
                         <div class="interest-bullet">•</div>
-                        <div>Cricket</div>
+                        <div>Playing Cricket</div>
                     </div>
+                    
                 </div>
                 
                 <div class="languages-section">
@@ -643,14 +709,12 @@
                 </div>
             </div>
             
-            <div class="right-column">
+            <div class="right-column" style="margin-top: -3%;">
                 <div class="about-section">
                     <h3 class="section-title">OBJECTIVE</h3>
                     <div class="about-me">
                         I am seeking challenging opportunities in the textile industry where I can apply my skills in textile technology and design 
-                to contribute to innovative projects and the success of the organization. With a strong foundation in textile manufacturing, 
-                design principles, and modern technology tools, I am passionate about creating sustainable and efficient solutions in the 
-                textile sector while continuously expanding my expertise in emerging technologies.
+                to contribute to innovative projects and the success of the organization.
 
                     </div>
                 </div>
@@ -660,22 +724,44 @@
                     <div class="education-item">
                         <strong>Bachelor of Technology in Textile Technology</strong><br>
                         The Technology Institute of Textile and Sciences, Bhiwani<br>
-                        Currently in Semester 7 (Expected Graduation: 2025)
+                        Currently in Semester 7 (Expected Graduation: 2026)
                     </div>
                     <div class="education-item">
                         <strong>Higher Secondary Education (12th Grade)</strong><br>
                         Bhiwani Public School, Bhiwani<br>
-                        Completed: 2021
+                        Completed: 2022
                     </div>
+                    <!-- <div class="education-item">
+                        <strong>Secondary Education (10th Grade)</strong><br>
+                        Happy High School, Bhiwani<br>
+                        Completed: 2020
+                    </div> -->
+                </div>
+
+                <div class="education-section">
+                    <h3 class="section-title">PROJECTS</h3>
                     <div class="education-item">
+                        <strong>Beam Gaiting Process Optimization | Textile Manufacturing</strong><br>
+                        Beam gaiting for weaving looms to reduce downtime during style changes.<br>
+                        Hand-on experience in loom preparation, beam mounting, and gaiting techniques.
+                    </div>
+                    
+                    <div class="education-item">
+                     <a href="https://abhishekportfolioo.github.io/Textilecalculator/" style="color: black; text-decoration: none;">   <strong>Textile Calculator Web App</strong><br></a>
+                        Suite of tools for weaving, spinning, unit conversion, and QA calculations.<br>
+                    </div>
+
+                    <!-- <div class="education-item">
                         <strong>Secondary Education (10th Grade)</strong><br>
                         Happy High School, Bhiwani<br>
                         Completed: 2019
-                    </div>
+                    </div> -->
                 </div>
                 
                 <div class="courses-section">
-                    <h3 class="section-title">CERTIFICATIONS & COURSES</h3>
+                    <h3 class="section-title">SHORT TERM ONLINE COURSES</h3>
+
+                    
                     <div class="experience-item">
                         <div><a href="https://www.credly.com/badges/de88068a-516a-4cb9-b2dc-7c2e57551a4a" target="_blank" class="course-link">Wool Appreciation Course</a> - The Woolmark Company, Australia (Sep 2024)</div>
                     </div>
@@ -688,24 +774,37 @@
                     <div class="experience-item">
                         <div><a href="https://www.credly.com/badges/38e88b80-78ff-42b9-b459-8867ee369a69/public_url" target="_blank" class="course-link">Wool Fiber Science</a> - The Woolmark Company, Australia</div>
                     </div>
-                    <div class="experience-item">
+                    <!-- <div class="experience-item">
                         <div><a href="https://verify.mygreatlearning.com/FJSRRPPW" target="_blank" class="course-link">UI/UX for Beginners</a> - Great Learning Academy</div>
-                    </div>
+                    </div> -->
                     <div class="experience-item">
                         <div><a href="Abhishek%20Dangi%20-%20microsoft%20copilot%20Certificate.pdf" target="_blank" class="course-link">Microsoft Copilot Certification</a> - Hardik Raja (Mar 2024)</div>
                     </div>
-                    <div class="experience-item">
+                    <!-- <div class="experience-item">
                         <div><a href="https://verify.mygreatlearning.com/EFFORVDH" target="_blank" class="course-link">Graphics Design Fundamentals</a> - Great Learning Academy</div>
                     </div>
                     <div class="experience-item">
                         <div><a href="https://verify.mygreatlearning.com/EFFORVDH" target="_blank" class="course-link">C Programming Language</a> - The Technology Institute of Textile and Sciences, Bhiwani</div>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <div class="experience-section">
                     <h3 class="section-title">TRAINING & WORKSHOPS</h3>
                     <div class="experience-item">
                         <div><a href="Abhishek ITT Certificates training.pdf" target="_blank" class="course-link">3-Day Intensive Training on Manufacturing and Testing of Technical Textiles</a> - Institute of Technical Textiles Pvt. Ltd. (Certificate No: TSC/ITT/2024/002)</div>
+                    </div>
+                </div>
+
+                <div class="experience-section">
+                    <h3 class="section-title">INTERNSHIP</h3>
+                    <div class="experience-item">
+                        <div>
+                            <strong>Weaving Department – GBTL (Grasim Bhiwani Textile Limited) </strong> <br>
+                           → 2-month industrial training in the Textile Manufacturing process with a focus on Weaving operations and technology.<br>
+                           → Gained hands-on experience in loom operations, beam gaiting, fabric quality checks, and process optimization.<br>
+                           → Acquired knowledge of production planning, yarn preparation, and defect analysis in woven fabric manufacturing.
+                        
+                        </div>
                     </div>
                 </div>
                 
